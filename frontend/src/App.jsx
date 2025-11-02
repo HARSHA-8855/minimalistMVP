@@ -7,6 +7,7 @@ import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartSidebar from './components/CartSidebar';
+import ConsultButton from './components/ConsultButton';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
@@ -18,6 +19,7 @@ import AIAssistants from './pages/AIAssistants';
 import TrackOrder from './pages/TrackOrder';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import Consultation from './pages/Consultation';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 
@@ -42,6 +44,7 @@ function App() {
                   <Route path="/hair-care" element={<HairCare />} />
                   <Route path="/ai-assistants" element={<AIAssistants />} />
                   <Route path="/track-order" element={<TrackOrder />} />
+                  <Route path="/consultation" element={<Consultation />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />
                   <Route path="/login" element={<Login />} />
@@ -50,6 +53,7 @@ function App() {
               </main>
               <Footer />
               <CartSidebar isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+              <ConsultButton />
               <Toaster position="top-right" />
             </div>
           </Router>
